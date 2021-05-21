@@ -34,6 +34,11 @@
   text-align: center;
 }
 
+#list-name {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
 .movies-container {
   display: flex;
   justify-content: space-between;
@@ -68,6 +73,7 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 16px;
 }
 
 .card-movie > img {
@@ -87,4 +93,5 @@
   opacity: .7;
   margin: 0;
 }
+
 

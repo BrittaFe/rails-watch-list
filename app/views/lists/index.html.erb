@@ -8,7 +8,7 @@
 <div class="container">
   <div class="list-flex">
     <% @lists.each do |list| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.pinimg.com/originals/ce/58/d6/ce58d6b9e5a77609c7ab05b80a24c5d1.jpg)">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key, height: 300, crop: :fill %>')">
         <%= link_to "#{list.name}", list_path(list), class:'list-name' %>
       </div>
     <% end %>
