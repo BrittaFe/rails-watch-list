@@ -1,51 +1,34 @@
 <div class="container">
   <h2 id="list-name"><%= @list.name %></h2>
-    <div class="list-layout">
-      <div class="card-list">
-        <% @list.bookmarks.each do |bookmark| %>
-          <div class="card-movie">
-            <img src=<%= bookmark.movie.poster_url %> />
-            <div class="card-movie-infos">
-              <div>
-                <h3><%= bookmark.movie.title %></h3>
-                <p><%= bookmark.movie.overview %></p>
-                <p><%= bookmark.movie.rating %></p>
-                <%= link_to bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" }, class: 'card-remove-link' do %>
-                  <i class="fas fa-trash"></i>
-                <% end %>
-              </div>
+  <div class="list-layout">
+    <div class="card-list">
+      <% @list.bookmarks.each do |bookmark| %>
+        <div class="card-movie">
+          <img src=<%= bookmark.movie.poster_url %> />
+          <div class="card-movie-infos">
+            <div>
+              <h3><%= bookmark.movie.title %></h3>
+              <p><%= bookmark.movie.overview %></p>
+              <p><%= bookmark.movie.rating %></p>
+              <%= link_to bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" }, class: 'card-remove-link' do %>
+                <i class="fas fa-trash"></i>
+              <% end %>
             </div>
           </div>
-        <% end %>
-      </div>
-        <div class="bookmark-form">
-          <h3>Add a movie</h3>
-          <%= simple_form_for(@list) do |f| %>
-            <%= f.error_notification %>
-            <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-            <div class="form-inputs">
-              <%= f.input :name %>
-            </div>
-            <div class="form-inputs">
-              <%= f.input :photo, as: :file %>
-            </div>
-
-            <div class="form-actions">
-              <%= f.button :submit %>
-            </div>
-          <% end %>
         </div>
+      <% end %>
     </div>
-  <div class="button">
-    <%= link_to "Bookmark a movie", new_list_bookmark_path(@list)  %>
-  </div>
-  <div class="button">
-    <%= link_to list_path(@list), method: :delete, data: { confirm: "Are you sure that you want to delete #{@list.name}?" }, class: 'card-remove-link' do %>
-      <i class="fas fa-trash"></i>
-    <% end %>
-  </div>
-  <div class="button">
-    <%= link_to "Back", lists_path  %>
+    <div class="bookmark-form">
+      <div class="button">
+        <%= link_to "Delete list", list_path(@list), method: :delete, data: { confirm: "Are you sure that you want to delete #{@list.name}?" }, class: 'card-remove-link' %>
+      </div>
+      <div class="button">
+        <%= link_to "Bookmark a movie", new_list_bookmark_path(@list)  %>
+      </div>
+      <div class="button">
+        <%= link_to "Back", lists_path  %>
+      </div>
+    </div>
   </div>
 </div>
 

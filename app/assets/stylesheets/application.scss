@@ -66,7 +66,7 @@
   color:white;
 
   &:hover {
-    color: yellow;
+    color: blue;
     text-decoration: none;
   }
 }
@@ -100,7 +100,7 @@
 }
 
 .card-movie > img {
-  height: 150px;
+  height: 130px;
   width: 100%;
   object-fit: cover;
 }
@@ -121,11 +121,15 @@
 
 .list-layout {
   display: flex;
+  margin-right: 0px;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .bookmark-form {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 24px;
 }
 
 .form-inputs {
@@ -133,5 +137,22 @@
 
 }
 
+.button {
+  border: 1px solid rgb(200, 200, 200);
+  padding: 8px 32px;
+  box-shadow: 2px 2px 2px rgb(220, 220, 220);
+  width: 150px;
+  border-radius: 32px;
+  margin: 0px 16px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: rgba(200, 200, 200, 0.8);
+  color: white;
+
+  &:hover {
+    color: blue;
+    text-decoration: none;
+  }
+}
 
 
