@@ -71,6 +71,67 @@
   }
 }
 
+.card-list {
+  display: flex;
+}
+
+.card-movie {
+  position: relative;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 16px;
+
+    .card-remove-link {
+    position: absolute;
+    top: 10px;
+    left: 264px;
+  }
+}
+
+.fa-trash {
+  color: white;
+
+  &:hover {
+    color: blue;
+    text-decoration: none;
+  }
+
+}
+
+.card-movie > img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-movie h3 {
+  margin-top: 16px;
+  font-size: 24px;
+  font-weight: bolder;
+  margin: 0;
+}
+
+.card-movie p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+  padding: 16px;
+}
+
+.list-layout {
+  display: flex;
+}
+
+.bookmark-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-inputs {
+  margin: 24px 16px;
+
+}
 
 
 
