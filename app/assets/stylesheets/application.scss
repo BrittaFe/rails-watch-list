@@ -8,6 +8,83 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 400px;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.container {
+  margin: 0 auto;
+  height: 100vh;
+  padding: 64px 0px;
+  text-align: center;
+}
+
+.movies-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.list-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card-category {
+  width: 300px;
+}
+
+#banner-typed-text{
+  color:white;
+  font-size: 32px;
+}
+
+.list-name {
+  color:white;
+
+  &:hover {
+    color: yellow;
+    text-decoration: none;
+  }
+}
+
+.card-movie {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-movie > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-movie h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-movie p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
